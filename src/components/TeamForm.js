@@ -17,34 +17,36 @@ const TeamForm = props => {
     setMembers({ name: "", email: "", role: "" });
   };
   return (
-    <form onSubmit={submitForm}>
-      <label htmlFor="name">Name</label>
-      <input
-        id="name"
-        type="text"
-        name="name"
-        onChange={handleChanges}
-        value={members.name}
-      />
+    <div className="inputs-container">
+      <form className="inputs" onSubmit={submitForm}>
+        <label htmlFor="name">Name</label>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          onChange={handleChanges}
+          value={members.name}
+        />
 
-      <label htmlFor="email">Email</label>
-      <input
-        id="email"
-        type="text"
-        name="email"
-        value={members.email}
-        onChange={handleChanges}
-      />
-      <label htmlFor="role">Role</label>
-      <input
-        id="role"
-        type="text"
-        name="role"
-        value={members.role}
-        onChange={handleChanges}
-      />
-      <button type="submit">Add Member</button>
-    </form>
+        <label htmlFor="email">Email</label>
+        <input
+          id="email"
+          type="text"
+          name="email"
+          value={members.email}
+          onChange={handleChanges}
+        />
+        <label htmlFor="role">Role</label>
+        <input
+          id="role"
+          type="text"
+          name="role"
+          value={members.role}
+          onChange={handleChanges}
+        />
+        <button type="submit">Add Member</button>
+      </form>
+    </div>
   );
 };
 
